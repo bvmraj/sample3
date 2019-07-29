@@ -171,6 +171,40 @@
             </build>
         </profile>
 
+        
+        <!--
+            AutoInstalls the content-package into the repository when the build is successful.
+        -->
+       <profile>
+    <id>autoInstallPackage</id>
+    <activation>
+        <activeByDefault>false</activeByDefault>
+    </activation>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.day.jcr.vault</groupId>
+                    <artifactId>content-package-maven-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <id>install-package</id>
+                            <goals>
+                                <goal>install</goal>
+                            </goals>
+                            <configuration>
+                                <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</profile> 
+        
+        
+        
         <!--
             Installs the content-package into the repository when the build is successful.
         -->
