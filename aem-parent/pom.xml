@@ -195,7 +195,7 @@
                                         <verbose>true</verbose>
                                         <userId>${server.user}</userId>
                                         <password>${server.password}</password>
-                                        <targetURL>${server.url}/crx/packmgr/service.jsp</targetURL>
+                                        <targetURL>${server.url}/crx/packmgr/index.jsp</targetURL>
                                     </configuration>
                                 </execution>
                             </executions>
