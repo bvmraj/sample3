@@ -11,7 +11,7 @@
     <artifactId>aem-sample-project-core</artifactId>
     <packaging>bundle</packaging>
 
-    <name>AEM Sample Project :: Core Bundle</name>
+    <name>AEM Sample Project :: Core Bundle 1</name>
 
     <build>
         <plugins>
