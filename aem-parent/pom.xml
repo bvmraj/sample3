@@ -132,36 +132,7 @@
     -->
     <profiles>
         
-    <profile>
-     <id>autoInstallPackage</id>
-    <activation>
-        <activeByDefault>false</activeByDefault>
-    </activation>
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>com.day.jcr.vault</groupId>
-                    <artifactId>content-package-maven-plugin</artifactId>
-                    <executions>
-                        <execution>
-                            <id>install-package</id>
-                            <goals>
-                                <goal>install</goal>
-                            </goals>
-                            <configuration>
-                                <targetURL>http://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
-</profile>
-        
-
-        <!--
+            <!--
            Installs the OSGi bundle into the repository when the build is successful.
 
            Note: Install the content-package first to make sure the path
